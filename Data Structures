@@ -1,0 +1,111 @@
+// LINEAR SEARCH // PROGRAM NO-1
+import java.util.Scanner;  
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in); 
+	    int[] array = new int[10]; 
+	    int n = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        array[i]=sc.nextInt();
+	    }
+	    int k = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        if(array[i] == k){
+	            System.out.println(i);
+	        }
+	    }
+	
+	}
+}
+// INPUT n = 5
+         array = [1,3,5,6,7]
+         k = 6
+// OUTPUT 3
+
+
+// COUNT NO.OF TIMES THE KEY REPEATED // PROGRAM NO-2
+import java.util.Scanner;  
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in); 
+	    int[] array = new int[10]; 
+	    int n = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        array[i]=sc.nextInt();
+	    }
+	    int count = 0;
+	    int k = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        if(array[i] == k){
+	            count += 1;
+	        }
+	    }
+	    System.out.println(count);
+	
+	}
+}
+// INPUT n = 5
+         array = [1,3,6,6,7]
+         k = 6
+// OUTPUT 2
+
+// NO.OF DUPLICATES OF AN ARRAY // PROGRAM NO-3
+import java.util.Scanner;  
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in); 
+	    int[] array = new int[10]; 
+	    int n = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        array[i]=sc.nextInt();
+	    }
+	    int count = 0;
+	    for(int i=0; i<n-1; i++){
+	        for(int j=i+1; j<n; j++){
+	            if(array[i] == array[j]){
+                        System.out.println(array[i]);
+	                count += 1;
+	                break;
+	            }
+	        }
+	    }
+	    System.out.println(count);
+	
+	}
+}
+// INPUT n = 5
+         array = [1,5,5,4,4]
+// OUTPUT 5,4
+          2
+
+
+// NO.OF UNIQUE ELEMENTS OF AN ARRAY // PROGRAM NO-4
+import java.util.Scanner;  
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in); 
+	    int[] array = new int[10]; 
+	    int n = sc.nextInt();
+	    for(int i=0; i<n; i++){
+	        array[i]=sc.nextInt();
+	    }
+	    int count = 0;
+	    for(int i=0; i<n-1; i++){
+	        for(int j=i+1; j<n; j++){
+	            if(array[i] == array[j]){
+	                count += 1;
+	                break;
+	            }
+	        }
+	    }
+	    System.out.println(n-count);
+	
+	}
+}
+// INPUT n = 5
+         array = [1,5,5,4,4]
+// OUTPUT 3
